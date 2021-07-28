@@ -6,7 +6,7 @@
 
 <html>
 <body>
-	<form action="insert">
+	<form action="login">
 	  <input type="submit" value="InsertEmp">
   </form>
 
