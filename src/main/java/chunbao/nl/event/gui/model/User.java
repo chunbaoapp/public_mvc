@@ -1,4 +1,4 @@
-package com.shankar.first.model;
+package chunbao.nl.event.gui.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
