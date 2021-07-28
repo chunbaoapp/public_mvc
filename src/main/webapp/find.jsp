@@ -6,13 +6,6 @@
 
 <html>
 	<body>
-	
-	
-	
-Finding Employee Details by id:<br>
-
-${alien}
-
-
-</body>
+	    Finding Employee Details by id:<br>${alien}
+  </body>
 </html>

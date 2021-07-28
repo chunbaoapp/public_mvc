@@ -6,17 +6,12 @@
 
 <html>
 	<body>
-	
-	
-	
-
-<form action="addAlien">
-	
-	aname:<input type="text" name="aname"><br>
-	aid:<input type="text" name="aid"><br>
-	<input type="submit">
-
-
-</form>
+      <form action="addAlien">
+        aname:<input type="text" name="aname">
+        <br>
+        aid:<input type="text" name="aid">
+        <br>
+        <input type="submit">
+      </form>
 </body>
 </html>

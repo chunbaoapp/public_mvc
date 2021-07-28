@@ -5,34 +5,17 @@
 <title>HelloWorld</title>
 
 <html>
-	<body>
-	
+<body>
 	<form action="insert">
-	
-	
-	<input type="submit" value="InsertEmp">
-
-
-</form>
+	  <input type="submit" value="InsertEmp">
+  </form>
 
 	<form action="view">
-	
-	
-	<input type="submit" value="ViewEmpList">
-
-
-</form>
+	  <input type="submit" value="ViewEmpList">
+  </form>
 
 	<form action="find">
-	
-	
-	<input type="submit" value="FindEmpById">
-
-
-</form>
-	
-	
-
-
+	  <input type="submit" value="FindEmpById">
+  </form>
 </body>
 </html>
