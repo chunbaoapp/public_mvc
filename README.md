@@ -1,3 +1,6 @@
-# springboot
-Project where you can see how to configure spring security (via UserDetailsService implementation) and thymeleaf template engine in spring boot application and use spring security name spaces on web pages.
+# todo-management-spring-boot
 
+
+# Mini Todo Management Project using Spring Boot + Spring MVC + Spring Security + JSP + Hibernate + MySQL
+
+- http://www.javaguides.net/2018/09/mini-todo-management-project-using-spring-boot-springmvc-springsecurity-jsp-hibernate-mysql.html
