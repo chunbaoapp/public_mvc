@@ -1,7 +1,7 @@
 package chunbao.nl.event.service;
 
-import chunbao.nl.event.gui.model.User;
+import chunbao.nl.event.gui.model.MyUser;
 
 public interface UserService {
-  boolean existUser(User user);
+  MyUser findByUsername(String username);
 }

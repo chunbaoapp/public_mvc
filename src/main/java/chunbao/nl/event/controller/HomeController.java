@@ -2,7 +2,7 @@ package chunbao.nl.event.controller;
 
 import chunbao.nl.event.gui.DAO.AlienRepo;
 import chunbao.nl.event.gui.model.Alien;
-import chunbao.nl.event.gui.model.User;
+import chunbao.nl.event.gui.model.MyUser;
 import chunbao.nl.event.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +22,7 @@ public class HomeController {
   }
 
   @RequestMapping("login")
-  public String login(User user) {
+  public String login(MyUser user) {
     return "user.jsp";
   }
 
