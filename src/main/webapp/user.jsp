@@ -9,7 +9,7 @@
 	<form action="login">
 	          username:<input type="text" name="username">
             <br>
-            aid:<input type="text" name="password">
+            password:<input type="text" name="password">
             <br>
             <input type="submit">
   </form>

@@ -1,7 +1,9 @@
-package chunbao.nl.event.gui.controller;
+package chunbao.nl.event.controller;
 
 import chunbao.nl.event.gui.DAO.AlienRepo;
 import chunbao.nl.event.gui.model.Alien;
+import chunbao.nl.event.gui.model.User;
+import chunbao.nl.event.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,10 +14,16 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
 
   @Autowired AlienRepo repo;
+  @Autowired UserService userService;
 
   @RequestMapping("/")
   public String home() {
-    return "home.jsp";
+    return "user.jsp";
+  }
+
+  @RequestMapping("login")
+  public String login(User user) {
+    return "user.jsp";
   }
 
   @RequestMapping("insert")
