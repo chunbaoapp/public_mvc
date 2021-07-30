@@ -1,17 +1,18 @@
 package chunbao.nl.event.gui.config;
 
-import java.util.Properties;
-import org.springframework.context.annotation.Bean;
+import chunbao.nl.event.gui.auth.MyInMemoryUserDetailsManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+  @Autowired MyInMemoryUserDetailsManager myInMemoryUserDetailsManager;
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
@@ -31,15 +32,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-    auth.userDetailsService(inMemoryUserDetailsManager());
+    auth.userDetailsService(myInMemoryUserDetailsManager);
   }
 
   // this is important!!!
   // https://stackoverflow.com/questions/25869260/how-can-i-add-users-to-the-inmemoryauthentication-builder-after-it-has-been-buil
   // https://spring.io/guides/gs/securing-web/
-  @Bean
+  /*  @Bean
   public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
     final Properties users = new Properties();
     return new InMemoryUserDetailsManager(users);
-  }
+  }*/
 }

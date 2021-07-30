@@ -6,14 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.stereotype.Component;
 
 @Component
 public class AuthenticationService {
 
   @Autowired UserService userService;
-  @Autowired InMemoryUserDetailsManager inMemoryUserDetailsManager;
+  @Autowired MyInMemoryUserDetailsManager myInMemoryUserDetailsManager;
 
   private UserDetails loadUserByUsername(String username) {
     MyUser myUser = userService.findByUsername(username);
@@ -31,10 +30,12 @@ public class AuthenticationService {
 
   public void login(MyUser myUser) {
     UserDetails userDetails = loadUserByUsername(myUser.getUsername());
-    inMemoryUserDetailsManager.createUser(userDetails);
+    if (userDetails != null) {
+      myInMemoryUserDetailsManager.createUser(userDetails);
+    }
   }
 
   public void logout(MyUser myUser) {
-    inMemoryUserDetailsManager.deleteUser(myUser.getUsername());
+    myInMemoryUserDetailsManager.deleteUser(myUser.getUsername());
   }
 }

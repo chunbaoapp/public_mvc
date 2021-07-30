@@ -8,6 +8,9 @@ public class UserServiceBean implements UserService {
 
   @Override
   public MyUser findByUsername(String username) {
+    MyUser myUser = new MyUser();
+    myUser.setUsername(username);
+    myUser.setPassword(username);
     return new MyUser();
   }
 }
