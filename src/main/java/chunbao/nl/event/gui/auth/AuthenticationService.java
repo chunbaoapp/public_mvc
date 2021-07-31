@@ -28,11 +28,13 @@ public class AuthenticationService {
     return userDetails;
   }
 
-  public void login(MyUser myUser) {
+  public boolean login(MyUser myUser) {
     UserDetails userDetails = loadUserByUsername(myUser.getUsername());
     if (userDetails != null) {
       myInMemoryUserDetailsManager.createUser(userDetails);
+      return true;
     }
+    return false;
   }
 
   public void logout(MyUser myUser) {

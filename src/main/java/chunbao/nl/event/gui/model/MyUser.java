@@ -8,6 +8,13 @@ public class MyUser {
   @Id String username;
   String password;
 
+  public MyUser() {}
+
+  public MyUser(String username, String password) {
+    this.username = username;
+    this.password = password;
+  }
+
   public String getUsername() {
     return username;
   }
