@@ -1,7 +1,7 @@
 package chunbao.nl.event.gui.auth;
 
 import chunbao.nl.event.gui.model.MyUser;
-import chunbao.nl.event.service.UserService;
+import chunbao.nl.event.gui.service.UserService;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package chunbao.nl.event.service;
+package chunbao.nl.event.gui.service;
 
 import chunbao.nl.event.gui.model.MyUser;
 

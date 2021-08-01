@@ -1,4 +1,4 @@
-package chunbao.nl.event.gui.config;
+package chunbao.nl.event.gui.controller;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -6,7 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserRepos {
+public class UserRepo {
   private Map<String, MyUser> users = new HashMap<>();
 
   public MyUser findUser(String username) {
