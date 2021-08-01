@@ -6,4 +6,4 @@ import org.springframework.context.annotation.Configuration;
 // scan for spring beans
 @ComponentScan({"chunbao.nl.event.service"})
 @Configuration
-public class SpringConfiguration {}
+public class SpringScanBeansConfiguration {}

@@ -11,6 +11,6 @@ public class UserServiceBean implements UserService {
     MyUser myUser = new MyUser();
     myUser.setUsername(username);
     myUser.setPassword(username);
-    return new MyUser();
+    return myUser;
   }
 }

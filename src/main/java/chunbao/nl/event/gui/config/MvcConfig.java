@@ -2,22 +2,21 @@ package chunbao.nl.event.gui.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
-@EnableWebMvc
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
 
   @Override
   public void addViewControllers(ViewControllerRegistry registry) {
-    registry.addViewController("/").setViewName("index");
-    registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+    registry.addViewController("/home").setViewName("home");
+    registry.addViewController("/").setViewName("home");
+    registry.addViewController("/hello").setViewName("hello");
+    registry.addViewController("/login").setViewName("login");
   }
 
   @Bean
