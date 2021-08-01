@@ -17,18 +17,18 @@ public class UserController {
   }
 
   @GetMapping("/login")
-  public String login() {
+  public String getLogin() {
     return "login";
   }
 
   @GetMapping("/hello")
-  public String hello(Model model) {
+  public String getHello(Model model) {
     model.addAttribute("username", AuthenticationUtil.getAuthenticatedPrincipal());
     return "hello";
   }
 
   @GetMapping("/register")
-  public String registerPage(Model model) {
+  public String getRegister(Model model) {
     model.addAttribute("myUser", new MyUser("username", "password"));
     return "register";
   }
