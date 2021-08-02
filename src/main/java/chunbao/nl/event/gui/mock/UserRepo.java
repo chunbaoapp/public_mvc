@@ -1,19 +1,19 @@
 package chunbao.nl.event.gui.mock;
 
-import chunbao.nl.event.gui.model.MyUser;
+import chunbao.nl.event.module.GuiUser;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Component;
 
 @Component
 public class UserRepo {
-  private Map<String, MyUser> users = new HashMap<>();
+  private Map<String, GuiUser> users = new HashMap<>();
 
-  public MyUser findUser(String username) {
+  public GuiUser findUser(String username) {
     return users.get(username);
   }
 
-  public void addUser(MyUser myUser) {
+  public void addUser(GuiUser myUser) {
     users.put(myUser.getUsername(), myUser);
   }
 

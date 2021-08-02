@@ -1,8 +1,8 @@
 package chunbao.nl.event.gui.controller;
 
 import chunbao.nl.event.gui.auth.AuthenticationUtil;
-import chunbao.nl.event.gui.model.MyUser;
 import chunbao.nl.event.gui.service.UserService;
+import chunbao.nl.event.module.GuiUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,12 +33,12 @@ public class UserController {
 
   @GetMapping("/register")
   public String getRegister(Model model) {
-    model.addAttribute("myUser", new MyUser("username", "password"));
+    model.addAttribute("guiUser", new GuiUser("username", "password"));
     return "register";
   }
 
   @PostMapping("/register")
-  public String register(@ModelAttribute MyUser myUser) {
+  public String register(@ModelAttribute GuiUser myUser) {
     userService.addUser(myUser);
     return "login";
   }

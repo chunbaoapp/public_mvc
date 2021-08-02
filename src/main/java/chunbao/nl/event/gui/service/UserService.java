@@ -1,11 +1,11 @@
 package chunbao.nl.event.gui.service;
 
-import chunbao.nl.event.gui.model.MyUser;
+import chunbao.nl.event.module.GuiUser;
 
 public interface UserService {
-  MyUser findByUsername(String username);
+  GuiUser findByUsername(String username);
 
-  void addUser(MyUser myUser);
+  void addUser(GuiUser myUser);
 
   void deleteUser(String username);
 }

@@ -1,7 +1,7 @@
 package chunbao.nl.event.gui.service;
 
 import chunbao.nl.event.gui.mock.UserRepo;
-import chunbao.nl.event.gui.model.MyUser;
+import chunbao.nl.event.module.GuiUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,12 +11,12 @@ public class UserServiceBean implements UserService {
   @Autowired UserRepo userRepos;
 
   @Override
-  public MyUser findByUsername(String username) {
+  public GuiUser findByUsername(String username) {
     return userRepos.findUser(username);
   }
 
   @Override
-  public void addUser(MyUser myUser) {
+  public void addUser(GuiUser myUser) {
     userRepos.addUser(myUser);
   }
 

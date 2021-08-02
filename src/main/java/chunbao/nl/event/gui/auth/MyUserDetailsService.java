@@ -1,7 +1,7 @@
 package chunbao.nl.event.gui.auth;
 
-import chunbao.nl.event.gui.model.MyUser;
 import chunbao.nl.event.gui.service.UserService;
+import chunbao.nl.event.module.GuiUser;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class MyUserDetailsService implements UserDetailsService {
 
   @Override
   public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-    MyUser user = userService.findByUsername(userName);
+    GuiUser user = userService.findByUsername(userName);
     if (user == null) {
       throw new UsernameNotFoundException(userName);
     }
