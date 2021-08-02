@@ -16,9 +16,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyUserDetailsService implements UserDetailsService {
 
-  private static final String USERNAME = "user";
-  private static final String PASSWORD = "password";
-
   @Autowired UserService userService;
 
   @Override
